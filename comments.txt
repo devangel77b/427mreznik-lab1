@@ -1,0 +1,20 @@
+1. This is a review of the manuscript "Investigating constant acceleration: a replication of Galileo's free fall hypothesis" by Chan, Reznik, Zlotnikov, Tiboni, and Hallur. It has lots of odd word choices / ways to explain things that do not make sense and needs major revision; it also gives methods as a bulleted list and should be rejected!
+
+2. Abstract: The abstract sets up that they are testing the (possibly mythical) Galileo experiment of dropping balsl from the leaning tower to see if objects of different mass fell with the same acceleration. Times to fall were measured and analyzed and shown to not be significantly different.
+
+3. Introduction: No sources are given for what the MS says about Galileo. The MS introduces the idea of "force" without explaining it and there are no direct measuremetns of force or acceleration. Odd word choices "This is also known as the accelration of gravity which is valued at -9.8" "the force of gravity, which inflicts a constant acceleration force downwards" etc. need to be revised throughout. The introduction develops a formula but does not explain where the formula comes from or how it was developed or give a source. It would appear to need calculus to develop the formula, which did not exist when Galileo did the original experimetn!
+
+4. Methods are written as a bulleted list. This is unacceptable and the paper should be rejected. Relevant details such as the camera type, frame rate, resolution, placement, etc are not provided. while irrelevant details like "drop sites were cleared" are included. Details on the camera calibration or any correction for distortion need to be provided. Fig 1 is entirely too large for the amount of information it conveys about setup as it is mostly cute textures for grass and bricks. The instructions given to timers and droppers are given (good!) Google Video is mentioned but no link given and no explanation for what Google Video was used for is provided.
+
+5. REsults: Fig 2 provides fall time and appears like a scatter plot but it is really not - it is fall time for different drops. This is misleading and should be rejected!
+
+Fig 3 and onward provide both a parabola and line and are very confusing. The axes are not labeled. The line is a "linear regression" for x vs t^2 which means the x axes are totally different. It is not a velocity vs time plot! REJECT! Several more of these are provided and appear to just take up space in the MS and do not convey information.
+
+6. While the authors claim the R^2 show they are right, the R^2 just shows their thing falls on a line. They do not show the lines all have the same slope (same gravity!). They claim to support Galileo's hypothesis without ever having explictly stated what that is.
+
+No acknowledgements given.
+
+References - Desmos and Google Videos and Google Drawings - no actual Galileo source is cited, nor any physics references with necessary background, nor the packages used to do video analysis (how does "Google Videos" do this?) nor statistical analysis. REJECT.
+
+
+
