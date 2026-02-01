@@ -1,0 +1,225 @@
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{siunitx}
+%\usepackage{tikz,pgfplots}
+\sisetup{separate-uncertainty=true}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{cleveref}
+\crefname{equation}{}{}
+\crefname{figure}{Fig.}{Figs.}
+\crefname{table}{Table}{Tables}
+\usepackage{svg}
+
+% set PDF metadata
+\hypersetup{%
+pdftitle={Objects fall with constant acceleration regardless of mass},
+pdfauthor={Ayaan Hallur, Justin Chan, Mark Reznik, Paul Zlotnikov, Joe Tiboni},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{2}, 63--68 (2026)}
+\fancyhead[LO]{Reznik \emph{et al}}
+\fancyhead[LE]{Objects fall with constant acceleration regardless of mass}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 63--68 (2026)}
+\fancyfoot[C]{\thepage}
+}
+
+
+\begin{document}
+\setcounter{page}{63}
+
+\title{Objects fall with constant acceleration regardless of mass}
+\author{Ayaan Hallur}
+\author{Justin Chan}
+\author{Mark Reznik}
+\email{Contact author: 427mreznik@frhsd.com}
+\author{Paul Zlotnikov}
+\author{Joe Tiboni}
+\affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
+\date{\today}
+
+\begin{abstract}
+This study replicated Galileo Galilei's experiment to test his hypothesis that objects fall with constant acceleration independent of mass, neglecting air resistance. We dropped ﬁve objects of varying masses (\qtyrange{0.002}{5.21}{\kilo\gram}) from a \qty{5}{\meter} height and measured descent times using video digitization. We compared experimental fall times to the theoretical prediction using the kinematic equation $y=-\frac{1}{2}gt^2$. Objects were found to fall with the same acceleration (ANOVA, $p=0.34$). Linear regression analysis of distance versus $t^2$ yielded $R^2$ values between 0.92 and 0.999 across all objects, conﬁrming that objects undergo constant acceleration. External factors such as air resistance caused minor deviations from theory, but the data strongly support Galileo's hypothesis.
+\end{abstract}
+
+\keywords{keywords here}
+
+\maketitle\thispagestyle{mytitlepage}
+
+
+
+
+\section{Introduction}
+The Aristotelian model was scientifically dominant for approximately two thousand years, suggesting that object falling velocity was proportional to its weight (Aristotle, Translated 1984). It was not challenged by Galileo Galilei with his systematic experiments in the late sixteenth and early seventeenth centuries, which quantitatively demonstrated that all objects have a constant acceleration, and as such are affected equally in terms of gravity, when there is negligible air resistance \cite{bailey:1966, galilei:1638:discorsi}.
+
+Galileos hypothesis can be understood using the concept of gravitational acceleration; near the surface of Earth all objects have the same downward gravitation (near earth) so $g = \qty{9.8}{\meter\per\second\squared}$.  Neglecting air resistance and adopting directional convensions, the kinematic equation for distance (d), time (t) and gravitational acceleration is \cite{tipler}:
+\begin{equation}
+d = -\frac{1}{2} g t^2
+\label{eq:1}
+\end{equation}
+This equation derives from calculus-based physics. Starting from the deﬁnition of acceleration as the second derivative of position with respect to time, $a = g$ (constant), we integrate twice with initial conditions of zero displacement and zero initial velocity to obtain this equation. Though calculus was not formalized during Galileo's lifetime, he arrived at equivalent relationships through geometric reasoning about instantaneous velocity and average velocity \cite{galilei:1638:discorsi}.
+
+The primary hypothesis tested in this experiment is whether the relationship between fall distance and time conforms to $d=-\frac{1}{2}gt^2$ across multiple objects of different masses. If Galileo's hypothesis is correct, all objects should show the same relationship between $d$ and $t^2$, regardless of mass. If Aristotle's model were correct, we would heavier objects would either fall faster or accelerated faster \cite{aristotle:physics}. \textbf{YOU HAD WRONG STUFF HERE}
+
+
+
+
+
+
+
+
+
+\section{Methods and materials}
+\subsection{Drop site and measurement equipment}
+Experiments were conducted at a school building with a controlled outdoor drop zone. The drop height was measured using two independent methods: meter sticks positioned vertically against the exterior wall and measuring tape extended from the window to ground level. We recorded a drop height of \qty{5.0\pm0.5}{\meter}. The area below the drop site was cleared of obstacles and personnel before each trial.
+
+\subsection{Test objects}
+Five objects with varying masses were selected to test whether mass affects fall acceleration. The objects included a pingpong ball (\qty{2}{\gram}), a tennis ball (\qty{55}{\gram}), a large red ball (\qty{208}{\kilo\gram}), a bowling ball (\qty{6}{lb}, \qty{2.72}{\kilo\gram}), and a shotput (\qty{11.5}{lb}, \qty{5.21}{\kilo\gram}). This range of masses (spanning more than three orders of magnitude) was chosen to maximize the sensitivity of our test for mass-dependent effects on acceleration.
+
+\subsection{Video recording and digitization}
+Two iPhone 12 (Apple; Cupertino, CA) cameras were mounted on tripod stands positioned \qty{3}{\meter} from the drop zone at perpendicular angles to ensure complete object trajectory capture. Both cameras recorded at \qty{60}{frame\per\second} with 1080p resolution. Cameras were positioned to capture the full \qty{5}{\meter} fall distance within the video frame and were leveled to minimize perspective distortion.
+
+%2.4 Video Digitization
+Video analysis was performed using Tracker Video Analysis and Modeling Tool (v6.1.0), open-source software designed for physics education that extracts frame-by-frame position data from video \cite{tracker}. The software was calibrated using the known \qty{5}{\meter} drop height as a length reference. For each trial, the software identiﬁed the object's center in each frame and generated position-time data with an uncertainty of \qty{\pm 0.05}{\meter}.
+
+\subsection{Experimental procedure}
+%\textbf{You were told to write this as prose not a recipe list.}
+For each drop test, the test object was held stationary outside the window to ensure zero initial velocity. Cameras were started, and after \qty{1}{\second} of recording, the object was dropped. Each object was dropped five times, and the procedure was repeated for all five objects. A total of 25 trials were conducted over three experimental days under similar atmospheric conditions. 
+
+%The experimental procedure for each trial was as follows:
+%1. The test object was held stationary just outside the window, ensuring zero initial velocity.
+%2. Two members of the research team simultaneously started video recording on both cameras.
+%3. After 1 second of recording, the object was released without applying any directional force.
+%4. Recording continued until the object struck the ground.
+%5. The object was retrieved and inspected for damage.
+%6. Each object was dropped ﬁve times to assess consistency.This procedure was repeated for all ﬁve objects. A total of 25 trials (5 objects × 5 trials each) was conducted over three experimental days under similar atmospheric conditions.
+
+
+
+
+\section{Results}
+
+%3.1 distance versus time data
+Video digitization of all 25 trials yielded fall times for each object. \Cref{tab:1} shows measured fall times from object release to ground contact. \Cref{fig:2} shows representative trajectories for each type of ball.
+
+\begin{table}
+\caption{Measured fall times for each object across five trials}
+\label{tab:1}
+\end{table}
+%ObjectTrial 1Trial 2Trial 3Trial 4Trial 5Mean ± SD
+%Tennis ball1.01 s1.03 s1.00 s1.02 s1.01 s1.01 ± 0.01 s
+%Ping pong ball1.04 s1.06 s1.05 s1.07 s1.05 s1.05 ± 0.01 s
+%Redball0.99 s1.00 s1.01 s1.00 s0.99 s1.00 ± 0.01 s
+%Bowling ball0.98 s0.99 s1.00 s0.99 s1.00 s0.99 ± 0.01 s
+%Shotput0.97 s0.99 s1.00 s0.98 s0.99 s0.98 ± 0.01 s
+%Figure 1. Measured fall times for each object across ﬁve trials.
+
+\begin{figure}
+\caption{Representative trajectories for each type of ball. Line is an average of the five trials for each type of ball, with trials aligned based on their start.}
+\label{fig:2}
+\end{figure}
+
+%3.2 Distance vs. Time² Analysis
+\subsection{Examining $d=\frac{1}{2}gt^2$}
+\Cref{eq:1} predicts a linear relationship between distance ($d$) and time squared ($t^2$). Slopes obtained from linear regression of transformed data ($d$ vs $t^2$) should give an estimate of $\frac{1}{2}g=\qty{4.9}{\meter\per\second\squared}$. Plots of the data from \cref{fig:2}, transformed in this manner, are given in \cref{fig:4}. 
+\begin{figure}
+\caption{Representative trajectories for each type of ball, transformed to examine $d$ vs $t^2$. Each line is an average of the five trials for each type of ball, with trials aligned based on their start. Slopes are tabulated in \cref{tab:3}.}
+\label{fig:4}
+\end{figure}
+
+\Cref{tab:3} gives the results of linear regression analysis on the transformed data ($d$ vs $t^2$) shown in \cref{fig:4}. The observed slopes ranged from \qtyrange{4.72}{5.31}{\meter\per\second\squared}, with all values overlapping the theoretical value (\qty{4.9}{\meter\per\second\squared}) within measurement uncertainty.
+\begin{table}
+\caption{Regression model using $d=\frac{1}{2}gt^2$, from \cref{fig:4}.}
+\label{tab:3}
+\end{table}
+%Figure 3 shows transcribed numeric values of the slopes. Figure 4 shows graphical displays of the slopes.
+%ObjectSlope (m/s²)R²
+%Tennis ball4.890.920
+%Ping pong ball4.720.986
+%Redball5.150.999
+%Bowling ball5.280.997
+%Shotput5.310.968Figure 3. Linear regression of distance vs. t² for all ﬁve objects.
+
+
+
+
+
+
+
+\section{Discussion}
+The experimental results strongly support Galileo's hypothesis that objects fall with constant acceleration independent of mass \cite{galilei:1638:discorsi} and refute Aristotle \cite{aristotle:physics}. Our results are valid across three orders of magnitude in mass, for systems in close vicinity of the Earth's surface and in situations where air resistance and wind effects are negligible.
+
+\subsection{Testing Galileo's hypothesis}
+Galileo's hypothesis states that in the absence of air resistance, all objects fall with the same constant acceleration regardless of their mass. To test this hypothesis explicitly, we examined whether all ﬁve objects exhibit the same acceleration, as measured by the slope of the $d$ vs $t^2$ regression line. As shown in \cref{fig:4} and \cref{tab:3}, the observed slopes (\qtyrange{4.72}{ 5.31}{\meter\per\second\squared}) are consistent with each other and with the theoretical prediction of \qty{4.9}{\meter\per\second\squared}. 
+
+Additionally, an analysis of variance (ANOVA) test comparing the slopes across objects yielded $p = 0.34$, indicating no statistically signiﬁcant difference in acceleration between objects of different masses. This result supports Galileo's hypothesis \cite{galilei:1638:discorsi} and refute Aristotle's \cite{aristotle:physics}: all objects do accelerate at approximately the same rate, regardless of mass.
+
+The high $R^2$ values (\numrange{0.920}{0.999}) indicate that the relationship between distance and $t^2$ is strongly linear for all objects, conﬁrming that objects undergo constant acceleration rather than constant velocity (which would produce a linear $d$ vs $t$ relationship), further refuting Aristotle's alternative hypothesis \cite{aristotle:physics}.
+
+
+\subsection{Sources of error and deviations from theory}
+Several factors account for the observed deviations from the theoretical value of \qty{4.9}{\meter\per\second\squared}. Small, hollow, lightweight objects with higher surface area-to-mass ratios (tennis ball, ping pong ball) showed slightly lower observed slope (\qtyrange{4.72}{4.89}{\meter\per\second\squared}), suggesting air resistance effects.  Conversely, large and dense objects with lower surface area-to-mass ratios (shotput, bowling ball) showed corresponding slope values (\qtyrange{5.28}{5.31}{\meter\per\second\squared}).
+
+The Tracker software calibration introduced a systematic uncertainty of approximately \qty{\pm0.05}{\meter} in position measurements. This translates to $\pm 1\%$ uncertainty in calculated
+acceleration values. Additionally, slight variations in release technique may have imparted small initial velocities (estimated \qty{\pm 0.02}{\meter\per\second}), affecting measured fall times by $\pm 2\%$. Light wind during some trials may have caused horizontal object displacement, introducing measurement errors in vertical position.
+
+
+
+
+
+%4.3 Conclusion
+% already said these
+%The linear d vs. t² relationships, high R² values, and lack of signiﬁcant differences in acceleration across objects of vastly different masses (2 g to 5.21 kg) conﬁrm the central prediction of constant gravitational acceleration. The observed deviations from theoretical predictions can be attributed to air resistance and measurement limitations rather than to fundamental differences in how objects fall. These ﬁndings validate Galileo's revolutionary departure from Aristotelian physics and demonstrate that, in the absence of signiﬁcant air resistance, gravitational acceleration is truly universal.
+
+
+
+
+
+
+
+\section{Acknowledgements} 
+We thank several anonymous reviewers for providing helpful comments. AH did x. JC did x. MR did x. PZ did x. JT did x. \textbf{Why did you not add this.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliography{lab.bib}
+%References 
+
+%Galilei, Galileo. Two New Sciences. Translated by Stillman Drake, University of Wisconsin Press, 1974.
+
+%Tipler, Paul A., and Gene Mosca. Physics for Scientists and Engineers. 5th ed., W. H. Freeman, 2003.
+
+%Brown, Douglas, Robert M. Hanson, and Wolfgang Christian. "Tracker Online." Open Source Physics, AAPT, https://opensourcephysics.github.io/tracker-online/
+
+%Aristotle. (1984). Physics (Translated by Hardie, R. P., & Gaye, R. K.). In J. Barnes (Ed.), The complete works of Aristotle (Vol. 1). Princeton University Press.
+
+%Bailey, L. H. (1966). Galileo and the scientiﬁc revolution. Philosophical Review, 75(3), 361-374.
+
+%Harris, C. R., et al. (2020). Array programming with NumPy. Nature, 585, 357–362.
+
+%Python Software Foundation. (2024). Python Language Reference, version 3.9. Retrieved from https://www.python.org/
+
+%SciPy Developers. (2024). SciPy documentation, version 1.10. Retrieved from https://scipy.org/
+
+\end{document}
