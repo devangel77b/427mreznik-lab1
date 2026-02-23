@@ -13,6 +13,7 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
 \usepackage{svg}
+\svgpath{{./figures}}
 
 % set PDF metadata
 \hypersetup{%
@@ -123,7 +124,10 @@ Video digitization of all 25 trials yielded fall times for each object. \Cref{ta
 %Figure 1. Measured fall times for each object across ﬁve trials.
 
 \begin{figure}
-\caption{Representative trajectories for each type of ball. Line is an average of the five trials for each type of ball, with trials aligned based on their start.}
+\begin{center}
+\includesvg{fig2.svg}
+\end{center}
+\caption{Representative trajectories for each type of ball. Line is an average of the five trials for each type of ball, with trials aligned based on their start. I dont think this last bit is right.}
 \label{fig:2}
 \end{figure}
 
@@ -131,6 +135,9 @@ Video digitization of all 25 trials yielded fall times for each object. \Cref{ta
 \subsection{Examining $d=\frac{1}{2}gt^2$}
 \Cref{eq:1} predicts a linear relationship between distance ($d$) and time squared ($t^2$). Slopes obtained from linear regression of transformed data ($d$ vs $t^2$) should give an estimate of $\frac{1}{2}g=\qty{4.9}{\meter\per\second\squared}$. Plots of the data from \cref{fig:2}, transformed in this manner, are given in \cref{fig:4}. 
 \begin{figure}
+\begin{center}
+\includesvg{fig4.svg}
+\end{center}
 \caption{Representative trajectories for each type of ball, transformed to examine $d$ vs $t^2$. Each line is an average of the five trials for each type of ball, with trials aligned based on their start. Slopes are tabulated in \cref{tab:3}.}
 \label{fig:4}
 \end{figure}
