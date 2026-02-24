@@ -59,9 +59,9 @@ This study replicated Galileo Galilei's experiment to test his hypothesis that o
 
 
 \section{Introduction}
-The Aristotelian model was scientifically dominant for approximately two thousand years, suggesting that object falling velocity was proportional to its weight (Aristotle, Translated 1984). It was not challenged by Galileo Galilei with his systematic experiments in the late sixteenth and early seventeenth centuries, which quantitatively demonstrated that all objects have a constant acceleration, and as such are affected equally in terms of gravity, when there is negligible air resistance \cite{bailey:1966, galilei:1638:discorsi}.
+The Aristotelian model was scientifically dominant for approximately two thousand years, suggesting that object falling velocity was proportional to its weight \cite{aristotle:physics}. It was not challenged for many years, until Galileo Galilei performed systematic experiments in the late sixteenth and early seventeenth centuries, which quantitatively demonstrated that all objects have a constant acceleration, and as such are affected equally in terms of gravity, when there is negligible air resistance \cite{bailey:1966FAKE, galilei:1638:discorsi, machamer:2021:galileo}.
 
-Galileos hypothesis can be understood using the concept of gravitational acceleration; near the surface of Earth all objects have the same downward gravitation (near earth) so $g = \qty{9.8}{\meter\per\second\squared}$.  Neglecting air resistance and adopting directional convensions, the kinematic equation for distance (d), time (t) and gravitational acceleration is \cite{tipler}:
+Galileo's hypothesis can be understood using the concept of gravitational acceleration; near the surface of Earth all objects have the same downward gravitation (near earth) so $g = \qty{9.8}{\meter\per\second\squared}$.  Neglecting air resistance and adopting directional convensions, the kinematic equation for distance (d), time (t) and gravitational acceleration is \cite{tipler,openstax,barrons}:
 \begin{equation}
 d = -\frac{1}{2} g t^2
 \label{eq:1}
@@ -89,7 +89,7 @@ Five objects with varying masses were selected to test whether mass affects fall
 Two iPhone 12 (Apple; Cupertino, CA) cameras were mounted on tripod stands positioned \qty{3}{\meter} from the drop zone at perpendicular angles to ensure complete object trajectory capture. Both cameras recorded at \qty{60}{frame\per\second} with 1080p resolution. Cameras were positioned to capture the full \qty{5}{\meter} fall distance within the video frame and were leveled to minimize perspective distortion.
 
 %2.4 Video Digitization
-Video analysis was performed using Tracker Video Analysis and Modeling Tool (v6.1.0), open-source software designed for physics education that extracts frame-by-frame position data from video \cite{tracker}. The software was calibrated using the known \qty{5}{\meter} drop height as a length reference. For each trial, the software identiﬁed the object's center in each frame and generated position-time data with an uncertainty of \qty{\pm 0.05}{\meter}.
+Video analysis was performed using Tracker Video Analysis and Modeling Tool (v6.1.0), open-source software designed for physics education that extracts frame-by-frame position data from video \cite{tracker, renika:2024:kinematics}. The software was calibrated using the known \qty{5}{\meter} drop height as a length reference. For each trial, the software identiﬁed the object's center in each frame and generated position-time data with an uncertainty of \qty{\pm 0.05}{\meter}.
 
 \subsection{Experimental procedure}
 %\textbf{You were told to write this as prose not a recipe list.}
@@ -103,7 +103,8 @@ For each drop test, the test object was held stationary outside the window to en
 %5. The object was retrieved and inspected for damage.
 %6. Each object was dropped ﬁve times to assess consistency.This procedure was repeated for all ﬁve objects. A total of 25 trials (5 objects × 5 trials each) was conducted over three experimental days under similar atmospheric conditions.
 
-
+\subsection{Statistical analyses}
+Data were visualized in Python using the \texttt{numpy}, \texttt{scipy}, and \texttt{matplotlib} libraries \cite{numpy, scipy, matplotlib}. Statistical analyses \cite{starnes:2015:practice} were performed in R \cite{R} using the \texttt{dplyr} and \texttt{ggplot2} libraries \cite{dplyr,ggplot2}. 
 
 
 \section{Results}
@@ -178,8 +179,7 @@ The high $R^2$ values (\numrange{0.920}{0.999}) indicate that the relationship b
 \subsection{Sources of error and deviations from theory}
 Several factors account for the observed deviations from the theoretical value of \qty{4.9}{\meter\per\second\squared}. Small, hollow, lightweight objects with higher surface area-to-mass ratios (tennis ball, ping pong ball) showed slightly lower observed slope (\qtyrange{4.72}{4.89}{\meter\per\second\squared}), suggesting air resistance effects.  Conversely, large and dense objects with lower surface area-to-mass ratios (shotput, bowling ball) showed corresponding slope values (\qtyrange{5.28}{5.31}{\meter\per\second\squared}).
 
-The Tracker software calibration introduced a systematic uncertainty of approximately \qty{\pm0.05}{\meter} in position measurements. This translates to $\pm 1\%$ uncertainty in calculated
-acceleration values. Additionally, slight variations in release technique may have imparted small initial velocities (estimated \qty{\pm 0.02}{\meter\per\second}), affecting measured fall times by $\pm 2\%$. Light wind during some trials may have caused horizontal object displacement, introducing measurement errors in vertical position.
+The Tracker software calibration introduced a systematic uncertainty of approximately \qty{\pm0.05}{\meter} in position measurements \cite{tracker, renika:2024:kinematics}. This translates to $\pm 1\%$ uncertainty in calculated acceleration values. Additionally, slight variations in timing and release technique may have imparted small initial velocities (estimated \qty{\pm 0.02}{\meter\per\second}), affecting measured fall times by $\pm 2\%$ \cite{hetzler:2008:reliability, faux:2019:manual}. Light wind during some trials may have caused horizontal object displacement, introducing measurement errors in vertical position.
 
 
 
